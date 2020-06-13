@@ -1,7 +1,7 @@
 # Logecoin Core [LOGE, Ð]
 ==========================
 
-![Logecoin](http://static.tumblr.com/ppdj5y9/Ae9mxmxtp/300coin.png)
+![Logecoin](https://cdn.discordapp.com/attachments/697260548198367247/721366934825992222/158545530669652529.png)
 
 [![Build Status](https://travis-ci.org/logecoin/logecoin.svg?branch=1.14-dev)](https://travis-ci.org/logecoin/logecoin) [![tip for next commit](https://tip4commit.com/projects/702.svg)](https://tip4commit.com/github/logecoin/logecoin)
 
