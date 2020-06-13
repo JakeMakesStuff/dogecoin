@@ -10,7 +10,7 @@ from .script import CScript, OP_TRUE, OP_CHECKSIG, OP_RETURN
 # Create a block (with regtest difficulty)
 def create_block(hashprev, coinbase, nTime=None):
     block = CBlock()
-    # Dogecoin: Create a non-AuxPoW block but include chain ID
+    # Logecoin: Create a non-AuxPoW block but include chain ID
     block.nVersion = 0x620003
     if nTime is None:
         import time
@@ -67,7 +67,7 @@ def serialize_script_num(value):
 # otherwise an anyone-can-spend output.
 def create_coinbase(height, pubkey = None):
     coinbase = CTransaction()
-    coinbase.vin.append(CTxIn(COutPoint(0, 0xffffffff), 
+    coinbase.vin.append(CTxIn(COutPoint(0, 0xffffffff),
                 ser_string(serialize_script_num(height)), 0xffffffff))
     coinbaseoutput = CTxOut()
     coinbaseoutput.nValue = 500000 * COIN

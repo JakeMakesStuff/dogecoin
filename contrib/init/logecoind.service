@@ -1,0 +1,22 @@
+[Unit]
+Description=Logecoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=logecoin
+Group=logecoin
+
+Type=forking
+PIDFile=/var/lib/logecoind/logecoind.pid
+ExecStart=/usr/bin/logecoind -daemon -pid=/var/lib/logecoind/logecoind.pid \
+-conf=/etc/logecoin/logecoin.conf -datadir=/var/lib/logecoind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

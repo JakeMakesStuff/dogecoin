@@ -1,27 +1,27 @@
 #!/sbin/runscript
 
-# backward compatibility for existing gentoo layout 
+# backward compatibility for existing gentoo layout
 #
-if [ -d "/var/lib/dogecoin/.dogecoin" ]; then
-	BITCOIND_DEFAULT_DATADIR="/var/lib/dogecoin/.dogecoin"
+if [ -d "/var/lib/logecoin/.logecoin" ]; then
+	BITCOIND_DEFAULT_DATADIR="/var/lib/logecoin/.logecoin"
 else
-	BITCOIND_DEFAULT_DATADIR="/var/lib/dogecoind"
+	BITCOIND_DEFAULT_DATADIR="/var/lib/logecoind"
 fi
 
-BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/dogecoin/dogecoin.conf}
-BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/dogecoind}
-BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/dogecoind.pid}
+BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/logecoin/logecoin.conf}
+BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/logecoind}
+BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/logecoind.pid}
 BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
-BITCOIND_USER=${BITCOIND_USER:-${BITCOIN_USER:-dogecoin}}
-BITCOIND_GROUP=${BITCOIND_GROUP:-dogecoin}
-BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/dogecoind}
+BITCOIND_USER=${BITCOIND_USER:-${BITCOIN_USER:-logecoin}}
+BITCOIND_GROUP=${BITCOIND_GROUP:-logecoin}
+BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/logecoind}
 BITCOIND_NICE=${BITCOIND_NICE:-${NICELEVEL:-0}}
 BITCOIND_OPTS="${BITCOIND_OPTS:-${BITCOIN_OPTS}}"
 
 name="Bitcoin Core Daemon"
 description="Bitcoin cryptocurrency P2P network daemon"
 
-command="/usr/bin/dogecoind"
+command="/usr/bin/logecoind"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
 		-conf=\"${BITCOIND_CONFIGFILE}\" \
 		-datadir=\"${BITCOIND_DATADIR}\" \
@@ -71,7 +71,7 @@ checkconfig()
 {
 	if ! grep -qs '^rpcpassword=' "${BITCOIND_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run dogecoind."
+		eerror "ERROR: You must set a secure rpcpassword to run logecoind."
 		eerror "The setting must appear in ${BITCOIND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Logecoin Core
+Comment=Connect to the Logecoin P2P Network
+Comment[de]=Verbinde mit dem Logecoin peer-to-peer Netzwerk
+Comment[fr]=Logecoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Logecoin, eşten eşe kriptografik sanal para birimi
+Exec=logecoin-qt %u
+Terminal=false
+Type=Application
+Icon=logecoin128
+MimeType=x-scheme-handler/logecoin;
+Categories=Office;Finance;

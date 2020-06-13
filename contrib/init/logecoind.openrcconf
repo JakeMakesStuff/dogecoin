@@ -1,0 +1,33 @@
+# /etc/conf.d/logecoind: config file for /etc/init.d/logecoind
+
+# Config file location
+#LOGECOIND_CONFIGFILE="/etc/logecoin/logecoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $LOGECOIND_USER)
+#LOGECOIND_PIDDIR="/var/run/logecoind"
+
+# What filename to give the pidfile
+#LOGECOIND_PIDFILE="${LOGECOIND_PIDDIR}/logecoind.pid"
+
+# Where to write logecoind data (be mindful that the blockchain is large)
+#LOGECOIND_DATADIR="/var/lib/logecoind"
+
+# User and group to own logecoind process
+#LOGECOIND_USER="logecoin"
+#LOGECOIND_GROUP="logecoin"
+
+# Path to logecoind executable
+#LOGECOIND_BIN="/usr/bin/logecoind"
+
+# Nice value to run logecoind under
+#LOGECOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+LOGECOIND_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for logecoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+LOGECOIND_SIGTERM_TIMEOUT=60

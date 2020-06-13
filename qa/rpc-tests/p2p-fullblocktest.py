@@ -737,7 +737,7 @@ class FullBlockTest(ComparisonTestFramework):
         #                                                \-> b56p2 (16)
         #                                                \-> b56   (16)
         #
-        # Merkle tree malleability (CVE-2012-2459): repeating sequences of transactions in a block without 
+        # Merkle tree malleability (CVE-2012-2459): repeating sequences of transactions in a block without
         #                           affecting the merkle root of a block, while still invalidating it.
         #                           See:  src/consensus/merkle.h
         #
@@ -1246,7 +1246,7 @@ class FullBlockTest(ComparisonTestFramework):
         #  Test re-org of a week's worth of blocks (1088 blocks)
         #  This test takes a minute or two and can be accomplished in memory
         #
-        # Dogecoin: Currently this causes a node disconnect, and I'm not even sure that's wrong.
+        # Logecoin: Currently this causes a node disconnect, and I'm not even sure that's wrong.
         # TODO: Investigate if this fails correctly, or needs fixing
         if self.options.runbarelyexpensive:
             tip(88)
