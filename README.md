@@ -1,4 +1,4 @@
-# Logecoin Core [LOGE, Ð]
+# Logecoin Core [LOGE, Ł]
 ==========================
 
 ![Logecoin](https://cdn.discordapp.com/attachments/697260548198367247/721366934825992222/158545530669652529.png)
